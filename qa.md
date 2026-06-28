@@ -32,9 +32,15 @@
 - Live `.nojekyll` 200: PASS.
 - Live one H1 / one form / zero iframes: PASS.
 - Live phone route present: PASS.
+- Live `tel:7408012718` present: PASS.
+- Live `sms:7408012718` present: PASS.
+- Live `Message on Facebook` visible matches: zero.
 - Live rejected phrase grep: PASS.
 - Live desktop hero screenshot: `qa-live-desktop-hero.png`.
 - Live mobile hero screenshot: `qa-live-mobile-hero.png`.
 - Live horizontal gallery start screenshot: `qa-live-gallery-start.png`.
 - Live horizontal gallery scrolled screenshot: `qa-live-gallery-scrolled.png`.
+- Live phone desktop hero screenshot: `qa-live-phone-desktop-hero.png`.
+- Live phone mobile hero screenshot: `qa-live-phone-mobile-hero.png`.
+- Live phone contact screenshot: `qa-live-phone-contact.png`.
 - Live gallery movement check: PASS, track transform changed during scroll.
