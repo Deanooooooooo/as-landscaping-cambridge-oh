@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://deanooooooooo.github.io/as-landscaping-cambridge-oh"),
   title: "A&S Landscaping | Lawn Care Cambridge OH",
   description:
-    "Lawn mowing, trimming, bush work, yard cleanup and snow removal from A&S Landscaping in Cambridge, Ohio.",
+    "Call A&S Landscaping for lawn mowing, trimming, bush work, yard cleanup and snow removal in Cambridge, Ohio.",
   robots: "index, follow",
   alternates: {
     canonical: "https://deanooooooooo.github.io/as-landscaping-cambridge-oh/",
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     type: "website",
     title: "A&S Landscaping | Lawn Care Cambridge OH",
     description:
-      "Lawn care, trimming, cleanup and snow removal help for homes around Cambridge, Ohio.",
+      "Call A&S Landscaping for lawn care, trimming, cleanup and snow removal help around Cambridge, Ohio.",
     url: "https://deanooooooooo.github.io/as-landscaping-cambridge-oh/",
     images: ["/assets/hero-lawn.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "A&S Landscaping | Lawn Care Cambridge OH",
-    description: "Mowing, trimming, cleanup and snow removal help in Cambridge, Ohio.",
+    description: "Call for mowing, trimming, cleanup and snow removal help in Cambridge, Ohio.",
     images: ["/assets/hero-lawn.png"],
   },
 };

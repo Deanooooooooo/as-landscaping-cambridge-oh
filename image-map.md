@@ -5,7 +5,8 @@
 - Facebook: `https://www.facebook.com/people/AS-landscaping/61587562415537/`
 - Resolved public name/location: A&S Landscaping, Cambridge, OH.
 - Public description mentions mowing grass, trimming bushes, snow removal and other outdoor work.
-- No verified phone or email was visible in the public logged-out view.
+- Phone found from public Facebook/search result context: `740-801-2718`.
+- No verified email was visible in the public logged-out view.
 - No useful written public review quotes were visible, so no testimonial cards are used.
 
 ## Asset Tier
@@ -55,4 +56,4 @@
 
 - Do not show Facebook review counts, rating states or source-mechanics copy.
 - Do not add testimonials unless a real written customer quote is available.
-- Do not invent phone, email, exact address, years in business, awards, guarantees, reviews or project proof.
+- Do not invent email, exact address, years in business, awards, guarantees, reviews or project proof.

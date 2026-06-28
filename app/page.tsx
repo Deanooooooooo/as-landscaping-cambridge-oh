@@ -8,10 +8,10 @@ import Lenis from "@studio-freight/lenis";
 import {
   ArrowUpRight,
   CheckCircle2,
-  Facebook,
   Flower2,
   Leaf,
   MessageSquareText,
+  Phone,
   Send,
   Shovel,
   Snowflake,
@@ -29,6 +29,8 @@ const businessName = "A&S Landscaping";
 const facebookUrl = "https://www.facebook.com/people/AS-landscaping/61587562415537/";
 const location = "Cambridge, OH";
 const serviceArea = "Cambridge and nearby Ohio homes";
+const phoneDisplay = "740-801-2718";
+const phoneHref = "tel:7408012718";
 
 const services = [
   {
@@ -166,8 +168,9 @@ export default function Page() {
       `Timing: ${data.get("timing") || ""}`,
       `Details: ${data.get("details") || ""}`,
     ];
-    void navigator.clipboard?.writeText(lines.join("\n"));
-    window.open(facebookUrl, "_blank", "noreferrer");
+    const message = lines.join("\n");
+    void navigator.clipboard?.writeText(message);
+    window.location.href = `sms:7408012718?&body=${encodeURIComponent(message)}`;
   }
 
   const schema = {
@@ -176,6 +179,7 @@ export default function Page() {
     name: businessName,
     image: assets("hero-lawn.png"),
     url: "https://deanooooooooo.github.io/as-landscaping-cambridge-oh/",
+    telephone: phoneDisplay,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Cambridge",
@@ -206,9 +210,9 @@ export default function Page() {
             <a className="hover:text-white" href="#gallery">Gallery</a>
             <a className="hover:text-white" href="#contact">Contact</a>
           </nav>
-          <a href={facebookUrl} target="_blank" rel="noreferrer">
+          <a href={phoneHref}>
             <Button className="min-h-11 rounded-lg bg-[#9ed15d] px-4 text-[#132015] hover:bg-white">
-              <Facebook size={17} /> <span className="hidden sm:inline">Message</span><span className="sm:hidden">FB</span>
+              <Phone size={17} /> <span className="hidden sm:inline">Call {phoneDisplay}</span><span className="sm:hidden">Call</span>
             </Button>
           </a>
         </div>
@@ -234,8 +238,13 @@ export default function Page() {
                 A&amp;S Landscaping helps Cambridge homeowners keep grass, bushes, walkways and winter access under control with straightforward outdoor work.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href="#contact">
+                <a href={phoneHref}>
                   <Button className="rounded-lg bg-[#9ed15d] text-[#132015] hover:bg-white">
+                    <Phone size={18} /> Call {phoneDisplay}
+                  </Button>
+                </a>
+                <a href="#contact">
+                  <Button variant="secondary" className="rounded-lg border-white/18 bg-white/10 text-white hover:bg-white/18">
                     <MessageSquareText size={18} /> Start a quote request
                   </Button>
                 </a>
@@ -276,9 +285,9 @@ export default function Page() {
                 </div>
                 <label className="grid gap-1.5 text-sm font-black text-white/78">Details<textarea className="min-h-28 rounded-lg border border-white/12 bg-white px-3 py-3 text-base font-bold text-[#172116] outline-none ring-[#9ed15d]/45 transition placeholder:text-[#172116]/42 focus:ring-4" name="details" placeholder="Tell them what needs cutting, trimming, clearing or shovelling." required /></label>
                 <Button className="min-h-13 rounded-lg bg-[#9ed15d] text-base font-black text-[#132015] hover:bg-white">
-                  <Send size={18} /> Copy details and message A&amp;S
+                  <Send size={18} /> Copy details and text A&amp;S
                 </Button>
-                <p className="text-sm font-semibold leading-6 text-white/62">This copies your request and opens Facebook so you can paste the details into a message.</p>
+                <p className="text-sm font-semibold leading-6 text-white/62">This copies your request and opens a text to {phoneDisplay}. You can also call if the job is urgent.</p>
               </form>
             </aside>
           </div>
@@ -379,8 +388,12 @@ export default function Page() {
                 <h2 className="mt-3 text-4xl font-black leading-tight sm:text-6xl">Ask A&amp;S Landscaping about yard work in Cambridge.</h2>
               </div>
               <div className="grid gap-3">
-                <a className="flex items-center justify-between gap-4 rounded-lg bg-white p-5 font-black shadow-premium" href={facebookUrl} target="_blank" rel="noreferrer">
-                  <span className="flex items-center gap-3"><Facebook className="text-[#53751e]" size={24} /> Message on Facebook</span>
+                <a className="flex items-center justify-between gap-4 rounded-lg bg-white p-5 font-black shadow-premium" href={phoneHref}>
+                  <span className="flex items-center gap-3"><Phone className="text-[#53751e]" size={24} /> Call {phoneDisplay}</span>
+                  <ArrowUpRight size={22} />
+                </a>
+                <a className="flex items-center justify-between gap-4 rounded-lg bg-white p-5 font-black shadow-premium" href={`sms:7408012718`}>
+                  <span className="flex items-center gap-3"><MessageSquareText className="text-[#53751e]" size={24} /> Text for a quote</span>
                   <ArrowUpRight size={22} />
                 </a>
                 <div className="flex items-center gap-3 rounded-lg bg-white p-5 font-black shadow-premium">
@@ -404,8 +417,8 @@ export default function Page() {
             </div>
           </div>
           <div className="flex flex-wrap gap-3">
-            <a aria-label="Message A&S Landscaping on Facebook" className="grid h-11 w-11 place-items-center rounded-lg bg-white/10 text-white hover:bg-[#9ed15d] hover:text-[#132015]" href={facebookUrl} target="_blank" rel="noreferrer">
-              <Facebook size={20} />
+            <a aria-label="Call A&S Landscaping" className="grid h-11 w-11 place-items-center rounded-lg bg-white/10 text-white hover:bg-[#9ed15d] hover:text-[#132015]" href={phoneHref}>
+              <Phone size={20} />
             </a>
             <a aria-label="Back to quote form" className="grid h-11 w-11 place-items-center rounded-lg bg-white/10 text-white hover:bg-[#9ed15d] hover:text-[#132015]" href="#contact">
               <ArrowUpRight size={20} />

@@ -10,7 +10,8 @@
 - Hero form/checklist present: PASS.
 - Map iframe: intentionally omitted because no exact address/map listing was verified.
 - Public copy grep for rejected Facebook/review/source phrases: PASS.
-- No fake phone, email, exact address, reviews, awards, guarantees or project claims: PASS.
+- Phone route present: `740-801-2718`.
+- No fake email, exact address, reviews, awards, guarantees or project claims: PASS.
 
 ## Visual QA
 
@@ -30,7 +31,7 @@
 - Live hero image 200: PASS.
 - Live `.nojekyll` 200: PASS.
 - Live one H1 / one form / zero iframes: PASS.
-- Live Facebook contact route present: PASS.
+- Live phone route present: PASS.
 - Live rejected phrase grep: PASS.
 - Live desktop hero screenshot: `qa-live-desktop-hero.png`.
 - Live mobile hero screenshot: `qa-live-mobile-hero.png`.
